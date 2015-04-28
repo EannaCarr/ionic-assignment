@@ -181,4 +181,43 @@ src="http://cdn.phillymag.com/wp-content/uploads/2014/09/CheeseAssortment1.jpg">
       <h2>Cheese</h2>
       <p>371 Calories per 100g</p>
 	   
-    </a>
+    </a> </div>
+      </ion-content>
+    </ion-pane>
+      </ion-content>
+    <ion-footer-bar align-title="center" class="bar-calm">
+      
+    </ion-footer-bar> </ion-pane>
+  <script type="text/javascript">
+    
+   function incDec(plusMinus) {
+      var plusMinus = parseInt(plusMinus);
+      var currentLife = 
+parseInt(document.getElementById("myLife").innerHTML) + plusMinus;
+      //alert(currentLife);
+     
+     if(currentLife < 0)
+     {
+       currentLife = 0;
+     }
+     else if(currentLife > 10050)
+     {
+       currentLife = 10050;
+     }
+     else
+     {
+       document.getElementById("myLife").innerHTML = currentLife;
+     }
+   }
+    function randomDiceroll() {
+      document.getElementById("diceRoll").innerHTML = 
+Math.floor(Math.random() *(20-1+1)+1);
+    }
+    
+    function reset() {
+      document.getElementById("myLife").innerHTML = 00;
+      document.getElementById("diceRoll").innerHTML = 0;
+    } 
+    </script>
+  </body> 
+</html>
