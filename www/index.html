@@ -202,21 +202,22 @@ src="http://cdn.phillymag.com/wp-content/uploads/2014/09/CheeseAssortment1.jpg">
    
 <!--Javascript. This is what makes the counter + reset work. I got this 
 code from the rolldice app on learnonline and adapted it to work for my 
-purpose.--> .
-  <script type="text/javascript">
-    
+purpose.-->
+<!--calorieContent is the value being added to dailyTotal by 
+incDec onclick.--> . <!--The app has a daily limit of 10050 calories, an 
+outrageous amount by any humans standards.--> <script 
+type="text/javascript">
+<!--This is the reset function. It sets the counter to 0 when clicked.-->    
    function incDec(plusMinus) {
       var plusMinus = parseInt(plusMinus);
       var calorieContent = 
 parseInt(document.getElementById("dailyTotal").innerHTML) + plusMinus;
       //alert(calorieContent);
-     <!--calorieContent is the value being added to dailyTotal by incDec 
-onclick.-->
+    
      if(calorieContent < 0)
      {
        calorieContent = 0;
-     }<!--The app has a daily limit of 10050 calories, an outrageous 
-     }amount by any humans standards.-->
+     }  
      else if(calorieContent > 10050)
      {
        calorieContent = 10050;
@@ -226,8 +227,7 @@ onclick.-->
        document.getElementById("dailyTotal").innerHTML = calorieContent;
      }
    }
-<!--This is the reset function. It sets the counter to 0 when 
-clicked.-->
+
     
     function reset() {
       document.getElementById("dailyTotal").innerHTML = 00;
